@@ -2,10 +2,19 @@
 
 namespace App\Controllers;
 
+use App\Models\Model;
+
 
 class Controller {
+
+	protected $model;
+
+	public function __construct( Model $model ) {
+		$this->model = $model;
+	}
+
 	public function index()
 	{
-		return 'Hello World!';
+		return $this->model->getItem();
 	}
 }
