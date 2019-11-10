@@ -16,4 +16,9 @@ class Model {
 	{
 		return $this->item;
 	}
+
+	public function save($item)
+	{
+		return 'Fake saved ' . $item;
+	}
 }

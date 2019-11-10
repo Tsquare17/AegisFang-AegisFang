@@ -1,5 +1,9 @@
 <?php
 
 $route->get([
-	'' => 'Controller::index'
+	'/' => 'Controller::index'
+]);
+
+$route->post([
+	'/' => 'Controller::store'
 ]);
