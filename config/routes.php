@@ -7,3 +7,9 @@ $route->get([
 $route->post([
 	'/' => 'Controller::store'
 ]);
+
+$route->get([
+	'/about' => function() {
+		return 'how bout dat';
+	}
+]);

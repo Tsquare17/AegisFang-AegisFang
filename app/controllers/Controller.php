@@ -7,20 +7,13 @@ use App\Models\Model;
 
 class Controller {
 
-	protected $model;
-
-	public function __construct( Model $model )
+	public function index(Model $model)
 	{
-		$this->model = $model;
+		return $model->getItem();
 	}
 
-	public function index()
+	public function store(Model $model)
 	{
-		return $this->model->getItem();
-	}
-
-	public function store()
-	{
-		return $this->model->save('example data');
+		return $model->save('example data');
 	}
 }
