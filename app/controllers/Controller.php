@@ -5,15 +5,15 @@ namespace App\Controllers;
 use App\Models\Model;
 
 
-class Controller {
+class Controller
+{
+    public function index(Model $model)
+    {
+        return $model->getItem();
+    }
 
-	public function index(Model $model)
-	{
-		return $model->getItem();
-	}
-
-	public function store(Model $model)
-	{
-		return $model->save('example data');
-	}
+    public function store(Model $model)
+    {
+        return $model->save('example data');
+    }
 }

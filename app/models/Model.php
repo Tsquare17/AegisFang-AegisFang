@@ -3,22 +3,22 @@
 namespace App\Models;
 
 
-class Model {
+class Model
+{
+    protected $item;
 
-	protected $item;
+    public function __construct()
+    {
+        $this->item = 'Hello World!';
+    }
 
-	public function __construct()
-	{
-		$this->item = 'Hello World!';
-	}
+    public function getItem()
+    {
+        return $this->item;
+    }
 
-	public function getItem()
-	{
-		return $this->item;
-	}
-
-	public function save($item)
-	{
-		return 'Fake saved ' . $item;
-	}
+    public function save($item)
+    {
+        return 'Fake saved ' . $item;
+    }
 }

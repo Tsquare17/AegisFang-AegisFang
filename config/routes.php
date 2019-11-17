@@ -1,15 +1,21 @@
 <?php
 
-$route->get([
-	'/' => 'Controller::index'
-]);
+$route->get(
+    [
+    '/' => 'Controller::index'
+    ]
+);
 
-$route->post([
-	'/' => 'Controller::store'
-]);
+$route->post(
+    [
+    '/' => 'Controller::store'
+    ]
+);
 
-$route->get([
-	'/about' => function() {
-		return 'how bout dat';
-	}
-]);
+$route->get(
+    [
+    '/about' => function () {
+        return 'how bout dat';
+    }
+    ]
+);
