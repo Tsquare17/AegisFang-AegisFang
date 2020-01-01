@@ -7,21 +7,21 @@ use AegisFang\Router\Router;
  */
 
 $route->get(
-    [
-    '/' => 'Controller::index'
-    ]
+	[
+		'/' => 'Controller::index',
+	]
 );
 
 $route->post(
-    [
-    '/' => 'Controller::store'
-    ]
+	[
+		'/' => 'Controller::store',
+	]
 );
 
 $route->get(
-    [
-    '/about' => function () {
-        return 'how bout dat';
-    }
-    ]
+	[
+		'/about' => function () {
+			return 'how bout dat';
+		},
+	]
 );
