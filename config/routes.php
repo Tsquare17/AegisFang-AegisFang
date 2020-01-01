@@ -1,5 +1,11 @@
 <?php
 
+use AegisFang\Router\Router;
+
+/**
+ * @var Router $route
+ */
+
 $route->get(
     [
     '/' => 'Controller::index'
