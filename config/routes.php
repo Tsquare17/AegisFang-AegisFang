@@ -1,9 +1,7 @@
 <?php
 
-use AegisFang\Router\Router;
-
 /**
- * @var Router $route
+ * @var AegisFang\Router\Router $route
  */
 
 $route->get(
