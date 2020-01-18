@@ -2,14 +2,17 @@
 
 namespace App\Controllers;
 
+use AegisFang\Router\RestController;
 use App\Models\Model;
 
 
-class Controller
+class Controller extends RestController
 {
     public function index(Model $model)
     {
-        return $model->getItem();
+        return $this->send(
+            $model->getItem()
+        );
     }
 
     public function store(Model $model)

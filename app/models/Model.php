@@ -9,7 +9,23 @@ class Model
 
     public function __construct()
     {
-        $this->item = 'Hello World!';
+        $this->item = [
+            'status' => 'success',
+            'data' => [
+                [
+                    'id' => 1,
+                    'name' => 'Trevor',
+                ],
+                [
+                    'id' => 2,
+                    'name' => 'Bob',
+                ],
+                [
+                    'id' => 3,
+                    'name' => 'Joe',
+                ]
+            ]
+        ];
     }
 
     public function getItem()
