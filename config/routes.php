@@ -7,6 +7,9 @@
 $route->get(
     [
         '/' => 'Controller::index',
+	    '/test' => function() {
+    	    echo 'test';
+	    }
     ]
 );
 

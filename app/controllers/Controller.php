@@ -10,7 +10,7 @@ class Controller extends RestController
 {
     public function index(Model $model)
     {
-        return $this->send(
+        $this->send(
             $model->getItem()
         );
     }
