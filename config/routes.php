@@ -26,3 +26,11 @@ $route->get(
         },
     ]
 );
+
+$route->any(
+	[
+		'/wildcard' => function () {
+			echo 'wildcard bitches!';
+		}
+	]
+);

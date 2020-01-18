@@ -5,6 +5,6 @@ use AegisFang\Application;
 
 $app = new Application(dirname(__DIR__, 1) . '/');
 
-$aegis = $app->run();
+$aegisfang = $app->run();
 
-$aegis->getContent();
+$aegisfang->getContent();
