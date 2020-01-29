@@ -7,9 +7,9 @@
 $route->get(
     [
         '/' => 'Controller::index',
-	    '/test' => function() {
-    	    echo 'test';
-	    }
+        '/test' => static function () {
+            echo 'test';
+        }
     ]
 );
 
@@ -21,16 +21,16 @@ $route->post(
 
 $route->get(
     [
-        '/about' => function () {
+        '/about' => static function () {
             echo 'how bout dat';
         },
     ]
 );
 
 $route->any(
-	[
-		'/wildcard' => function () {
-			echo 'wildcard bitches!';
-		}
-	]
+    [
+        '/wildcard' => static function () {
+            echo 'wildcard bitches!';
+        }
+    ]
 );

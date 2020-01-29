@@ -8,8 +8,9 @@ use App\Models\Model;
 
 class Controller extends JsonController
 {
-    public function index(Model $model)
+    public function index(Model $model): void
     {
+        $this->response->setHeader(['Access-Control-Allow-Origin' => '*']);
         $this->send(
             $model->getItem()
         );
