@@ -5,7 +5,7 @@ namespace App\Models;
 
 class Model
 {
-    protected $item;
+    protected array $item;
 
     public function __construct()
     {

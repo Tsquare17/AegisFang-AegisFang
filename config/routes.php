@@ -7,23 +7,16 @@
 $route->get(
     [
         '/' => 'Controller::index',
-        '/test' => static function () {
-            echo 'test';
-        }
+        '/about' => static function () {
+            echo 'about';
+        },
+        '/users' => 'UsersController::index',
     ]
 );
 
 $route->post(
     [
         '/' => 'Controller::store',
-    ]
-);
-
-$route->get(
-    [
-        '/about' => static function () {
-            echo 'how bout dat';
-        },
     ]
 );
 

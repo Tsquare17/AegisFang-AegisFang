@@ -5,7 +5,9 @@ namespace App\Controllers;
 use AegisFang\Router\JsonController;
 use App\Models\Model;
 
-
+/**
+ * Class Controller
+ */
 class Controller extends JsonController
 {
     public function index(Model $model): void
