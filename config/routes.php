@@ -20,10 +20,11 @@ $route->post(
     ]
 );
 
-$route->any(
+$route->rest(
     [
         '/wildcard' => static function () {
             echo 'wildcard bitches!';
-        }
+        },
+	    '/test' => 'RestController'
     ]
 );
