@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use AegisFang\Router\JsonController;
+use AegisFang\Router\JsonRestController;
 use App\Models\Model;
 
 /**
  * Class Controller
  */
-class Controller extends JsonController
+class Controller extends JsonRestController
 {
     public function index(Model $model): void
     {

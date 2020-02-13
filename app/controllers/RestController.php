@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use AegisFang\Router\JsonController;
+use App\Models\Model;
 
 /**
  * Class RestController
@@ -13,53 +14,54 @@ class RestController extends JsonController
     {
         $this->send(
             [
-            	'index'
+                'index'
             ]
         );
     }
 
-	public function get()
-	{
-		$this->send(
-			[
-				'get'
-			]
-		);
+    public function get($id, $name, Model $model): void
+    {
+        $this->send(
+            [
+                $id => $name,
+                $model->getItem()
+            ]
+        );
     }
 
-	public function post()
-	{
-		$this->send(
-			[
-				'post'
-			]
-		);
-	}
-
-	public function put()
-	{
-		$this->send(
-			[
-				'put'
-			]
-		);
+    public function post(): void
+    {
+        $this->send(
+            [
+                'post'
+            ]
+        );
     }
 
-	public function delete()
-	{
-		$this->send(
-			[
-				'delete'
-			]
-		);
+    public function put(): void
+    {
+        $this->send(
+            [
+                'put'
+            ]
+        );
     }
 
-	public function options()
-	{
-		$this->send(
-			[
-				'options'
-			]
-		);
+    public function delete(): void
+    {
+        $this->send(
+            [
+                'delete'
+            ]
+        );
+    }
+
+    public function options(): void
+    {
+        $this->send(
+            [
+                'options'
+            ]
+        );
     }
 }

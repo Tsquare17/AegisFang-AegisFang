@@ -25,6 +25,6 @@ $route->rest(
         '/wildcard' => static function () {
             echo 'wildcard bitches!';
         },
-	    '/test' => 'RestController'
+        '/test' => 'RestController'
     ]
 );
