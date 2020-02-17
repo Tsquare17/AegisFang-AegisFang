@@ -4,6 +4,9 @@
  * @var AegisFang\Router\Router $route
  */
 
+use App\Http\Middleware\FirstMiddleware;
+use App\Http\Middleware\SecondMiddleware;
+
 $route->get(
     [
         '/' => 'Controller::index',
@@ -28,3 +31,8 @@ $route->rest(
         '/test' => 'RestController'
     ]
 );
+
+$route->get([
+        '/auth' => 'AuthController::index'
+])->middleware(FirstMiddleware::class)
+    ->middleware(SecondMiddleware::class);
