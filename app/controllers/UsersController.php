@@ -10,6 +10,8 @@ use App\Models\UsersModel;
  */
 class UsersController extends JsonController
 {
+    protected array $guarded = ['user_password'];
+
     public function index(UsersModel $model): void
     {
         $this->response->setHeader(['Access-Control-Allow-Origin' => '*']);
