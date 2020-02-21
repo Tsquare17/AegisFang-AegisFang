@@ -3,14 +3,14 @@
 namespace App\Controllers;
 
 use AegisFang\Router\JsonRestController;
-use App\Models\Model;
+use App\Models\SampleModel;
 
 /**
  * Class Controller
  */
 class Controller extends JsonRestController
 {
-    public function index(Model $model): void
+    public function index(SampleModel $model): void
     {
         $this->response->setHeader(['Access-Control-Allow-Origin' => '*']);
         $this->send(
@@ -18,7 +18,7 @@ class Controller extends JsonRestController
         );
     }
 
-    public function store(Model $model)
+    public function store(SampleModel $model)
     {
         return $model->save('example data');
     }

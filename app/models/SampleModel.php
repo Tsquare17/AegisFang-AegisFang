@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use AegisFang\Database\Model;
+use AegisFang\Database\Query;
 
-class Model
+class SampleModel extends Model
 {
     protected array $item;
 
-    public function __construct()
+    public function __construct(Query $query)
     {
         $this->item = [
             'status' => 'success',
@@ -26,6 +28,7 @@ class Model
                 ]
             ]
         ];
+        parent::__construct($query);
     }
 
     public function getItem()

@@ -2,17 +2,10 @@
 
 namespace App\Models;
 
-use AegisFang\Database\Query;
+use AegisFang\Database\Model;
 
-class UsersModel
+class Users extends Model
 {
-    protected Query $query;
-
-    public function __construct(Query $query)
-    {
-        $this->query = $query;
-    }
-
     public function getUsers()
     {
         return $this->query->select()

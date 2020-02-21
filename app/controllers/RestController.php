@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use AegisFang\Router\JsonController;
-use App\Models\Model;
+use App\Models\SampleModel;
 
 /**
  * Class RestController
@@ -19,8 +19,11 @@ class RestController extends JsonController
         );
     }
 
-    public function get($id, $name, Model $model): void
+    public function get(SampleModel $model): void
     {
+        $id = $this->request->id;
+        $name = $this->request->name;
+
         $this->send(
             [
                 $id => $name,
