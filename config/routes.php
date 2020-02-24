@@ -6,6 +6,7 @@
 
 use App\Http\Middleware\FirstMiddleware;
 use App\Http\Middleware\SecondMiddleware;
+use AegisFang\Auth\AuthGuard;
 
 $route->get(
     [
@@ -30,9 +31,9 @@ $route->rest(
         },
         '/test' => 'RestController'
     ]
-);
+)->middleware(FirstMiddleware::class)
+    ->middleware(SecondMiddleware::class);
 
 $route->get([
         '/auth' => 'AuthController::index'
-])->middleware(FirstMiddleware::class)
-    ->middleware(SecondMiddleware::class);
+])->middleware(AuthGuard::class);
