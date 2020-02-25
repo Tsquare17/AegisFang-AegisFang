@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use AegisFang\Auth\Auth;
 use AegisFang\Router\JsonController;
 
 /**
@@ -14,5 +15,20 @@ class AuthController extends JsonController
         $this->send(
             ['auth']
         );
+    }
+
+	public function register(Auth $auth)
+	{
+		if (
+			!$this->request->user_name
+			|| ! $this->request->user_email
+			|| ! $this->request->user_pass
+		) {
+			return false;
+		}
+
+		$this->send(
+			[$auth->register($this->request->user_name, $this->request->user_email, $this->request->user_pass)]
+		);
     }
 }
