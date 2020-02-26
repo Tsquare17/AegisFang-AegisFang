@@ -10,7 +10,7 @@ class Users extends Model
     {
         return $this->query->select()
             ->from('users')
-            ->where('user_id = 1')
+            ->where('user_id', 1)
             ->execute();
     }
 

@@ -39,5 +39,9 @@ $route->get([
 ])->middleware(AuthGuard::class);
 
 $route->post([
-	'/auth/register' => 'AuthController::register'
+    '/auth/register' => 'AuthController::register'
+]);
+
+$route->get([
+    '/getuser' => 'UsersController::getUser'
 ]);

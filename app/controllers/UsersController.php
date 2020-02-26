@@ -24,4 +24,11 @@ class UsersController extends JsonController
     {
         return $model->createUser();
     }
+
+    public function getUser(Users $users)
+    {
+        $this->send(
+            $users->findById(2)
+        );
+    }
 }
