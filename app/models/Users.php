@@ -11,7 +11,7 @@ class Users extends Model
         return $this->query->select()
             ->from('users')
             ->where('user_id', 1)
-            ->execute();
+            ->execute()->fetch();
     }
 
     public function createUser()
