@@ -3,10 +3,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use AegisFang\Application;
 use AegisFang\Console\App;
 
-$app = new Application(__DIR__ . '/');
-
-$command = new App($app, '0.1.0');
+$command = new App('0.1.0');
 $command->run();
