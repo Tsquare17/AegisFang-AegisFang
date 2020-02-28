@@ -36,5 +36,10 @@
                 "symlink": true
             }
         }
-    ]
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "php battlehammer setup"
+        ]
+    }
 }
