@@ -45,3 +45,7 @@ $route->post([
 $route->get([
     '/getuser' => 'UsersController::getUser'
 ]);
+
+$route->post([
+	'/auth/check' => 'AuthController::authenticate'
+]);

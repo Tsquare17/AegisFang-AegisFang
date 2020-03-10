@@ -31,4 +31,17 @@ class AuthController extends JsonController
 			[$auth->register($this->request->user_name, $this->request->user_email, $this->request->user_pass)]
 		);
     }
+
+	public function authenticate(Auth $auth)
+	{
+		if (Auth::check($this->request->user_name, $this->request->user_pass)) {
+			$this->send([
+				true
+			]);
+		} else {
+			$this->send([
+				false
+			]);
+		}
+    }
 }
