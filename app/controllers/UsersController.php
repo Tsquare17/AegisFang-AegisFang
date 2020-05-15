@@ -12,11 +12,14 @@ class UsersController extends JsonController
 {
     protected array $guarded = ['user_password'];
 
-    public function index(Users $model): void
+    public function index(Users $users): void
     {
         $this->response->setHeader(['Access-Control-Allow-Origin' => '*']);
+
+        $user = $users->findById(1);
+
         $this->send(
-            $model->getUsers()
+            $user->array()
         );
     }
 
