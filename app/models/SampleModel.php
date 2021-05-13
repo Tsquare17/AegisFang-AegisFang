@@ -11,6 +11,8 @@ class SampleModel extends Model
 
     public function __construct(Query $query)
     {
+        parent::__construct($query);
+
         $this->item = [
             'status' => 'success',
             'data' => [
@@ -28,7 +30,6 @@ class SampleModel extends Model
                 ]
             ]
         ];
-        parent::__construct($query);
     }
 
     public function getItem()

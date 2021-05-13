@@ -10,9 +10,9 @@ use AegisFang\Router\JsonController;
  */
 class AuthController extends JsonController
 {
-    public function index(): void
+    public function index()
     {
-        $this->send(
+        return $this->dispatch(
             ['auth']
         );
     }
@@ -27,7 +27,7 @@ class AuthController extends JsonController
 			return false;
 		}
 
-		$this->send(
+		return $this->dispatch(
 			[$auth->register($this->request->user_name, $this->request->user_email, $this->request->user_pass)]
 		);
     }
@@ -35,13 +35,13 @@ class AuthController extends JsonController
 	public function authenticate(Auth $auth)
 	{
 		if (Auth::check($this->request->user_name, $this->request->user_pass)) {
-			$this->send([
+			return $this->dispatch([
 				true
 			]);
-		} else {
-			$this->send([
-				false
-			]);
 		}
+        return $this->dispatch([
+            false
+        ]);
+
     }
 }

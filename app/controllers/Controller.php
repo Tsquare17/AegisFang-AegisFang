@@ -10,10 +10,10 @@ use App\Models\SampleModel;
  */
 class Controller extends JsonRestController
 {
-    public function index(SampleModel $model): void
+    public function index(SampleModel $model)
     {
         $this->response->setHeader(['Access-Control-Allow-Origin' => '*']);
-        $this->send(
+        return $this->dispatch(
             $model->getItem()
         );
     }

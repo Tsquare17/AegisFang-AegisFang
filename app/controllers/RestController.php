@@ -10,21 +10,21 @@ use App\Models\SampleModel;
  */
 class RestController extends JsonController
 {
-    public function index(): void
+    public function index()
     {
-        $this->send(
+        return $this->dispatch(
             [
                 'index'
             ]
         );
     }
 
-    public function get(SampleModel $model): void
+    public function get(SampleModel $model)
     {
         $id = $this->request->id;
         $name = $this->request->name;
 
-        $this->send(
+        return $this->dispatch(
             [
                 $id => $name,
                 $model->getItem()
@@ -32,36 +32,36 @@ class RestController extends JsonController
         );
     }
 
-    public function post(): void
+    public function post()
     {
-        $this->send(
+        return $this->dispatch(
             [
                 'post'
             ]
         );
     }
 
-    public function put(): void
+    public function put()
     {
-        $this->send(
+        return $this->dispatch(
             [
                 'put'
             ]
         );
     }
 
-    public function delete(): void
+    public function delete()
     {
-        $this->send(
+        return $this->dispatch(
             [
                 'delete'
             ]
         );
     }
 
-    public function options(): void
+    public function options()
     {
-        $this->send(
+        return $this->dispatch(
             [
                 'options'
             ]
