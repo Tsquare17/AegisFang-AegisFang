@@ -21,6 +21,10 @@ class CreateUsersTable extends Migration
         $blueprint->string('user_email')->unique();
         $blueprint->string('user_password');
 
+        $blueprint->int('user_profile_id')
+            ->references('user_id')
+            ->on('user_profiles');
+
         return $blueprint;
     }
 }

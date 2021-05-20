@@ -4,6 +4,11 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use AegisFang\Console\App;
+use Dotenv\Dotenv;
 
 $command = new App('0.1.0');
+
+$config = Dotenv::create(__DIR__);
+$config->load();
+
 $command->run();

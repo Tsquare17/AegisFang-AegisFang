@@ -19,7 +19,7 @@
     },
     "require": {
         "php": "^7.4 | ^8.0",
-        "aegisfang/core": "0.1.*",
+        "aegisfang/core": "@dev",
         "ext-pdo": "*",
         "ext-json": "*"
     },
@@ -27,6 +27,15 @@
         "phpunit/phpunit": "^8.4",
         "squizlabs/php_codesniffer": "^3.5"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Core/aegisfang",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "php battlehammer setup"
