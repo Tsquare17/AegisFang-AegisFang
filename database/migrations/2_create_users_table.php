@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
         $blueprint->string('user_password');
 
         $blueprint->int('user_profile_id')
-            ->references('user_id')
+            ->references('user_profile_id')
             ->on('user_profiles');
 
         return $blueprint;
