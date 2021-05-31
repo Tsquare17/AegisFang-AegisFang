@@ -49,3 +49,7 @@ $route->get([
 $route->post([
 	'/auth/check' => 'AuthController::authenticate'
 ]);
+
+$route->get([
+    '/html' => 'HtmlController::index'
+]);

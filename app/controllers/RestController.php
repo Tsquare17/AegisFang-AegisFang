@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use AegisFang\Router\JsonController;
+use AegisFang\Controller\ApiController;
 use App\Models\SampleModel;
 
 /**
  * Class RestController
  */
-class RestController extends JsonController
+class RestController extends ApiController
 {
     public function index()
     {

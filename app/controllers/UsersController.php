@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use AegisFang\Router\JsonController;
+use AegisFang\Controller\ApiController;
 use App\Models\Users;
 
 /**
  * Class UsersController
  */
-class UsersController extends JsonController
+class UsersController extends ApiController
 {
     protected array $guarded = ['user_password'];
 

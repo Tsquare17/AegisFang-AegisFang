@@ -3,12 +3,12 @@
 namespace App\Controllers;
 
 use AegisFang\Auth\Auth;
-use AegisFang\Router\JsonController;
+use AegisFang\Controller\ApiController;
 
 /**
  * Class AuthController
  */
-class AuthController extends JsonController
+class AuthController extends ApiController
 {
     public function index()
     {
